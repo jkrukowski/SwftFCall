@@ -1,0 +1,23 @@
+You have access to the following tools:
+{% for schema in input.functionSchemas %}
+  {{ schema }}
+{% endfor %}
+
+You must follow these instructions:
+Always select one or more of the above tools based on the user query
+If a tool is found, you must respond in the JSON format matching the following schema:
+{
+    "tools": [
+        {
+            "id": "<id of the selected tool>",
+            "input": <parameters for the selected tool, matching the tool's JSON schema
+        }
+    ]
+}
+Make sure number parameters are not surrounded by quotes.
+Make sure a list of tools are returned in a JSON array.
+If there is no tool that match the user request, you will respond with empty json.
+Do not add any additional Notes or Explanations
+
+User Query:
+{{ input.userQuery }}
