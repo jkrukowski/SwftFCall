@@ -4,6 +4,11 @@
 
 ## Usage
 
-1. Install [Ollama](https://ollama.ai)
-2. Pull LLM using Ollama (currently `codellama:7b-instruct` is used)
-3. Run `swift run` from command line
+```bash
+$ swift run swift-fcall [--model <model>] [--base-url <base-url>]
+
+OPTIONS:
+  --model <model>         Ollama model to use. (default: codellama:7b-instruct)
+  --base-url <base-url>   Ollama API base URL. (default: http://localhost:11434/api)
+  -h, --help              Show help information.
+```
